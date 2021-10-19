@@ -37,11 +37,12 @@ function color() {
     }
 }
 
+color();
+tasks();
+
 saveBtn.click(function(event) {
   var task = $(event.target).prev().val();
   var hourID = $(event.target).prev().attr("id")
   localStorage.setItem(hourID, task)
 })
 
-color();
-tasks();
